@@ -3,6 +3,6 @@
   <hr>
 
   <div class="list-group list-reset">
-    <button class="list-group-item list-group-item-action">myButton</button>
+    <button class="list-group-item list-group-item-action" *ngFor="let tag of getTagsHistory()"> {{ tag | titlecase }} </button>
   </div>
 </div>

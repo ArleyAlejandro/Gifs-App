@@ -1,14 +1,15 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { AsideComponent } from "./shared/components/aside/aside.component";
 import { HomePageComponent } from "./gifs/pages/home/home-page.component";
-import { CardListComponent } from "./gifs/components/card-list/card-list.component";
+import { provideHttpClient } from '@angular/common/http';
+import { bootstrapApplication } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, AsideComponent, HomePageComponent, CardListComponent],
+  standalone: true,
+  imports: [AsideComponent, HomePageComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
   title = 'Gifs-App';
